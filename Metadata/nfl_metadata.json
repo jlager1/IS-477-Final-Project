@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "NFL Team Statistics Dataset",
+  "description": "Cleaned dataset containing team-level historical performance statistics for current NFL franchises, including wins, losses, win percentage, playoff appearances, championships, conference championships, and division championships.",
+  "creator": {
+    "@type": "Organization",
+    "name": "IS 477 Final Project Group"
+  },
+  "source": "https://www.pro-football-reference.com/teams/",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Pro Football Reference"
+  },
+  "keywords": ["NFL", "football", "team statistics", "sports analytics", "championships"],
+  "variableMeasured": [
+    "City",
+    "Team_Name",
+    "From",
+    "To",
+    "W",
+    "L",
+    "Win_Percentage",
+    "Years_In_Playoffs",
+    "Championships",
+    "Championships_Conference",
+    "Championships_Division"
+  ],
+  "encodingFormat": "text/csv",
+  "license": "For educational use only; original data sourced from Pro Football Reference.",
+  "spatialCoverage": "United States",
+  "temporalCoverage": "1920/2026"
+}
