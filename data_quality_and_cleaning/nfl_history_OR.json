@@ -1,0 +1,177 @@
+[
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column2",
+    "newColumnName": "From",
+    "description": "Rename column Column2 to From"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column3",
+    "newColumnName": "To",
+    "description": "Rename column Column3 to To"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column4",
+    "newColumnName": "W",
+    "description": "Rename column Column4 to W"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column5",
+    "newColumnName": "L",
+    "description": "Rename column Column5 to L"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column6",
+    "description": "Remove column Column6"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column7",
+    "newColumnName": "Win_Percentage",
+    "description": "Rename column Column7 to Win_Percentage"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column8",
+    "description": "Remove column Column8"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Top Performers",
+    "description": "Remove column Top Performers"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Top Performers 2",
+    "description": "Remove column Top Performers 2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Top Performers 3",
+    "description": "Remove column Top Performers 3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Top Performers 4",
+    "description": "Remove column Top Performers 4"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Playoffs",
+    "newColumnName": "Years_In_Playoffs",
+    "description": "Rename column Playoffs to Years_In_Playoffs"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Playoffs2",
+    "description": "Remove column Playoffs2"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Playoffs3",
+    "description": "Remove column Playoffs3"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Playoffs4",
+    "description": "Remove column Playoffs4"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column9",
+    "description": "Remove column Column9"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column10",
+    "newColumnName": "Championships",
+    "description": "Rename column Column10 to Championships"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column11",
+    "newColumnName": "Championships_Conference",
+    "description": "Rename column Column11 to Championships_Conference"
+  },
+  {
+    "op": "core/column-rename",
+    "oldColumnName": "Column12",
+    "newColumnName": "Championships_Division",
+    "description": "Rename column Column12 to Championships_Division"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column",
+    "expression": "grel:value.replace(/\\s+[^\\s]+$/,\"\")",
+    "onError": "set-to-blank",
+    "newColumnName": "City",
+    "columnInsertIndex": 1,
+    "description": "Create column City at index 1 based on column Column using expression grel:value.replace(/\\s+[^\\s]+$/,\"\")"
+  },
+  {
+    "op": "core/column-addition",
+    "engineConfig": {
+      "facets": [
+        {
+          "type": "list",
+          "name": "Starred rows",
+          "expression": "row.starred",
+          "columnName": "",
+          "invert": false,
+          "omitBlank": false,
+          "omitError": false,
+          "selection": [
+            {
+              "v": {
+                "v": false,
+                "l": "false"
+              }
+            }
+          ],
+          "selectBlank": false,
+          "selectError": false
+        }
+      ],
+      "mode": "row-based"
+    },
+    "baseColumnName": "Column",
+    "expression": "grel:value.split(/\\s+/)[-1]",
+    "onError": "set-to-blank",
+    "newColumnName": "Team_Name",
+    "columnInsertIndex": 1,
+    "description": "Create column Team_Name at index 1 based on column Column using expression grel:value.split(/\\s+/)[-1]"
+  },
+  {
+    "op": "core/column-removal",
+    "columnName": "Column",
+    "description": "Remove column Column"
+  }
+]
