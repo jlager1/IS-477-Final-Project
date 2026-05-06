@@ -1,0 +1,33 @@
+{
+  "@context": "https://schema.org/",
+  "@type": "Dataset",
+  "name": "MLB Team Statistics Dataset",
+  "description": "Cleaned dataset containing team-level historical performance statistics for current MLB franchises, including wins, losses, win percentage, playoff appearances, World Series championships, pennants, and division championships.",
+  "creator": {
+    "@type": "Organization",
+    "name": "IS 477 Final Project Group"
+  },
+  "source": "https://www.baseball-reference.com/teams/",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Baseball Reference"
+  },
+  "keywords": ["MLB", "baseball", "team statistics", "sports analytics", "World Series"],
+  "variableMeasured": [
+    "City",
+    "Team_Name",
+    "From",
+    "To",
+    "W",
+    "L",
+    "Win_Percentage",
+    "Years_In_Playoffs",
+    "Championships",
+    "Championships_Conference",
+    "Championships_Division"
+  ],
+  "encodingFormat": "text/csv",
+  "license": "For educational use only; original data sourced from Baseball Reference.",
+  "spatialCoverage": "United States and Canada",
+  "temporalCoverage": "1876/2026"
+}
